@@ -17,6 +17,9 @@ class RainBase{
         translate(this.body.position.x, this.body.position.y);
         imageMode(CENTER);
         image(this.image, this.x, this.y, this.width, this.height);
+        if(this.y > 1600){
+            World.remove(world,this.body);   
+        }
         pop();
     }
 }
